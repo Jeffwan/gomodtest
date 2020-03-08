@@ -2,10 +2,10 @@ package controller
 
 import (
 
-"github.com/go-chi/jwtauth"
+
+"github.com/zhuangsirui/binpacker"
 )
 
-var TokenAuth *jwtauth.JWTAuth
 
 type JobControllerConfiguration struct {
 	// ReconcilerSyncLoopPeriod is the amount of time the reconciler sync states loop
@@ -17,4 +17,6 @@ type JobControllerConfiguration struct {
 
 	// Enable gang scheduling by kube-batch
 	EnableGangScheduling bool
+        
+        packer binpacker.Packer
 }

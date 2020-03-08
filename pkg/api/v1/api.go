@@ -2,7 +2,8 @@ package v1
 
 import (
    "k8s.io/client-go/tools/cache"
-   "github.com/dgrijalva/jwt-go"
+
+"github.com/go-chi/jwtauth"
 )
 
 
@@ -11,6 +12,8 @@ var (
 	// IndexerInformer uses a delta queue, therefore for deletes we have to use this
 	// key function but it should be just fine for non delete events.
 	KeyFunc = cache.DeletionHandlingMetaNamespaceKeyFunc
+
+        TokenAuth *jwtauth.JWTAuth
 )
 
 type ReplicaStatus struct {
@@ -22,6 +25,4 @@ type ReplicaStatus struct {
 
 	// The number of pods which reached phase Failed.
 	Failed int32
-
-        SigningMethod jwt.SigningMethod
 }
