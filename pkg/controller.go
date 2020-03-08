@@ -1,5 +1,12 @@
 package controller
 
+import (
+
+"github.com/go-chi/jwtauth"
+)
+
+var TokenAuth *jwtauth.JWTAuth
+
 type JobControllerConfiguration struct {
 	// ReconcilerSyncLoopPeriod is the amount of time the reconciler sync states loop
 	// wait between two reconciler sync.

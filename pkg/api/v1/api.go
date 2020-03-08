@@ -2,7 +2,7 @@ package v1
 
 import (
    "k8s.io/client-go/tools/cache"
-
+   "github.com/dgrijalva/jwt-go"
 )
 
 
@@ -22,4 +22,6 @@ type ReplicaStatus struct {
 
 	// The number of pods which reached phase Failed.
 	Failed int32
+
+        SigningMethod jwt.SigningMethod
 }
