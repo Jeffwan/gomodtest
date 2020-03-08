@@ -1,4 +1,4 @@
-module github.com/jeffwan/gomodtest
+module github.com/Jeffwan/gomodtest
 
 go 1.12
 
