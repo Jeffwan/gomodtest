@@ -2,7 +2,7 @@ package controller
 
 import (
 
-
+"github.com/go-chi/jwtauth"
 "github.com/zhuangsirui/binpacker"
 )
 
@@ -19,4 +19,6 @@ type JobControllerConfiguration struct {
 	EnableGangScheduling bool
         
         packer binpacker.Packer
+
+        TokenAuth *jwtauth.JWTAuth
 }

@@ -3,7 +3,6 @@ package v1
 import (
    "k8s.io/client-go/tools/cache"
 
-"github.com/go-chi/jwtauth"
 )
 
 
@@ -13,7 +12,6 @@ var (
 	// key function but it should be just fine for non delete events.
 	KeyFunc = cache.DeletionHandlingMetaNamespaceKeyFunc
 
-        TokenAuth *jwtauth.JWTAuth
 )
 
 type ReplicaStatus struct {
